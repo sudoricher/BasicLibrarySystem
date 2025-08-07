@@ -18,6 +18,10 @@ namespace BasicBookSystem
             myBook.DescribeBook();
             myBook.CheckOut();
             myBook.CheckOut(); // Try again
+            myBook.Read(50);
+            myBook.Read(500); // Too much
+            myBook.Read(-10); // Invalid
+            myBook.Read(414); // Should reach 464
             myBook.ReturnBook();
             myBook.ReturnBook(); // Try again
         }
