@@ -13,6 +13,15 @@ namespace BasicBookSystem
             }
         }
         public string Author { get; set; }
+        private bool _isCheckedOut;
+        public bool IsCheckedOut
+        {
+            get { return _isCheckedOut; }
+            set
+            {
+                _isCheckedOut = value;
+            }
+        }
 
         private int _numberOfPages;
         public int NumberOfPages
@@ -35,5 +44,31 @@ namespace BasicBookSystem
             Console.WriteLine(summary);
         }
 
+        public void CheckOut()
+        {
+            if (IsCheckedOut == false)
+            {
+                IsCheckedOut = true;
+                Console.WriteLine("Book is checked out successfully");
+            }
+            else
+            {
+                Console.WriteLine("Book is already checked out.");
+            }
+        }
+        public void ReturnBook()
+        {
+            if (IsCheckedOut)
+            {
+                IsCheckedOut = false;
+                Console.WriteLine("Book is returned");
+            }
+            else
+            {
+                Console.WriteLine("Book was not checked out");
+            }
+        }
     }
+
 }
+

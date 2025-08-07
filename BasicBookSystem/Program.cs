@@ -14,6 +14,12 @@ namespace BasicBookSystem
             theAlchemist.DescribeBook();
             Book atomicHabits = new Book("Atomic Habits", "James Clear", 320);
             atomicHabits.DescribeBook();
+            Book myBook = new Book("Clean Code", "Robert C. Martin", 464);
+            myBook.DescribeBook();
+            myBook.CheckOut();
+            myBook.CheckOut(); // Try again
+            myBook.ReturnBook();
+            myBook.ReturnBook(); // Try again
         }
     }
 }
