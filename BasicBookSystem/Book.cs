@@ -48,7 +48,7 @@ namespace BasicBookSystem
             this.NumberOfPages = numberOfPages;
         }
 
-        public void DescribeBook()
+        public virtual void DescribeBook()
         {
             string summary = $"Title: {Title} Author: {Author} Pages:{NumberOfPages}";
             Console.WriteLine(summary);

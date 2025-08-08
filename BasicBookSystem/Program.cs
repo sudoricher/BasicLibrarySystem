@@ -24,6 +24,11 @@ namespace BasicBookSystem
             myBook.Read(414); // Should reach 464
             myBook.ReturnBook();
             myBook.ReturnBook(); // Try again
+            SecureBook newBook = new SecureBook("123456789AS2D");
+            //newBook.Isbn = "123456789ASD";
+            newBook.DisplayInfo();
+            DigitalBook otherBook = new DigitalBook("Harry Potter", "J.K Rowlings",350,12);
+            otherBook.DescribeBook();
         }
     }
 }
